@@ -80,7 +80,7 @@ $font-sizes:("menu":20px);
             :hover{
                 background-color: #114B5FE5;
                 color: white;
-                font-weight: map-get($font-weights, "bold" );
+                font-weight: map-get($font-weights, "medium" );
             }
             a{
                 text-align: center;

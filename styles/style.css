@@ -59,7 +59,7 @@ body, *, *:before, *:after {
 .main-content-menu-container .main-content-menu .main-content-menu-item :hover {
   background-color: rgba(17, 75, 95, 0.8980392157);
   color: white;
-  font-weight: 700;
+  font-weight: 500;
 }
 .main-content-menu-container .main-content-menu .main-content-menu-item a {
   text-align: center;
