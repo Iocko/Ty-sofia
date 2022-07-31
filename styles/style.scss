@@ -8,6 +8,11 @@ body,*,*:before,*:after{
     font-family: 'Roboto', sans-serif;
 }
 //BODY//
+//VARS//
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+$line-heights: ("regular":23.44px,);
+//VARS//
+
 
 
 
@@ -25,7 +30,7 @@ body,*,*:before,*:after{
             padding-top: 8px;
             color: $headergray;
             font-size: 20px;
-            line-height: 23.44px;
+            line-height: $line-heights,"regular";
             a{
                 text-decoration: none;
                 color: #039BCB;
