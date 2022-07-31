@@ -1,0 +1,39 @@
+body, *, *:before, *:after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 64px;
+}
+.header-container .logo-container {
+  display: flex;
+}
+.header-container .logo-container .logo-text {
+  padding-top: 8px;
+  color: #717273;
+  font-size: 20px;
+  line-height: 23.44px;
+}
+.header-container .logo-container .logo-text a {
+  text-decoration: none;
+  color: #039BCB;
+}
+.header-container .header-menu {
+  list-style: none;
+}
+.header-container .header-menu .header-menu-item {
+  float: left;
+  padding-left: 16px;
+  font-size: 20px;
+  line-height: 23.44px;
+}
+.header-container .header-menu .header-menu-item a {
+  color: #717273;
+  text-decoration: none;
+}
+.header-container .header-menu .header-menu-item a:hover {
+  color: #FC8C41;
+}/*# sourceMappingURL=style.css.map */
