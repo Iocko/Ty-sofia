@@ -1,16 +1,20 @@
 //COLORS//
 $headergray:#717273;
 $selected:#FC8C41;
+$pageblue:#41BEFC;
+$blacktext:#03070B;
 //COLORS//
 //BODY//
 body,*,*:before,*:after{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 //BODY//
 //VARS//
 $font-weights: ("regular": 400, "medium": 500, "bold": 700);
 $line-heights: ("regular":23.44px,);
+$font-sizes:("menu":20px);
 //VARS//
 
 
@@ -30,7 +34,7 @@ $line-heights: ("regular":23.44px,);
             padding-top: 8px;
             color: $headergray;
             font-size: 20px;
-            line-height: $line-heights,"regular";
+            line-height: map-get($line-heights,"regular");
             a{
                 text-decoration: none;
                 color: #039BCB;
@@ -43,7 +47,7 @@ $line-heights: ("regular":23.44px,);
             float: left;
             padding-left: 16px;
             font-size: 20px;
-            line-height: 23.44px;
+            line-height: map-get($line-heights,"regular");
             a{
                 color: $headergray;
                 text-decoration: none;
@@ -57,3 +61,38 @@ $line-heights: ("regular":23.44px,);
 }
 
 //Header//
+//MAINMENU//
+.main-content-menu-container{
+    width: 100%;
+    .main-content-menu{
+        background-color: $pageblue;
+        border: 3px solid rgba(18, 43, 64, 0.5);
+        height: 86px;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        .main-content-menu-item{
+            font-size: map-get($font-sizes , "menu" ) ;
+            line-height: map-get($line-heights , "regular" );
+            height: 101%;
+            :hover{
+                background-color: #114B5FE5;
+                color: white;
+                font-weight: map-get($font-weights, "bold" );
+            }
+            a{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $blacktext;
+                height: 100%;
+               
+            }
+        }
+    }
+}
+
+//MAINMENU//
