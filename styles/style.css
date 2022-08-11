@@ -30,6 +30,9 @@ body, *, *:before, *:after {
   padding-left: 16px;
   font-size: 20px;
   line-height: 23.44px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .header-container .header-menu .header-menu-item a {
   color: #717273;

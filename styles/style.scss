@@ -48,7 +48,11 @@ $font-sizes:("menu":20px);
             padding-left: 16px;
             font-size: 20px;
             line-height: map-get($line-heights,"regular");
+            height: 100%;
+            display: flex;
+            align-items: center;
             a{
+                
                 color: $headergray;
                 text-decoration: none;
                 
