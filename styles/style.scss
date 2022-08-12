@@ -13,8 +13,8 @@ body,*,*:before,*:after{
 //BODY//
 //VARS//
 $font-weights: ("regular": 400, "medium": 500, "bold": 700);
-$line-heights: ("regular":23.44px,);
-$font-sizes:("menu":20px);
+$line-heights: ("regular":23.44px,"small":11px,);
+$font-sizes:("menu":20px,"smalltext":10px);
 //VARS//
 
 
@@ -107,6 +107,89 @@ $font-sizes:("menu":20px);
 
 //MAINMENU//
 
+//ARTICLE//
+.articles-container{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #FC8C41;
+    background: rgba(255, 255, 255, 0.2);
+    width: 900px;
+    height: 405px;
+    margin-top: 10px;
+    margin-left: 17px;
+    .article-preview{
+        position: relative;
+        .article-preview-image{
+            margin: 20px 0px;
+            display: block;
+            height: 365px;
+            width: 620px;
+        }
+        .article-preview-description
+        {
+            position: absolute;
+            padding: 14px 10px;
+            bottom: 15px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            font-size: map-get($font-sizes , "menu" ) ;
+            line-height: map-get($line-heights , "regular" );
+            color: #FFFFFF;
+            .spacer{
+                width: 100%;
+                height: 1em;
+            }
+            a{
+                text-decoration: none;
+                font-size: map-get($font-sizes , "menu" ) ;
+                line-height: map-get($line-heights , "regular" );
+                color: #FFFFFF;
+            }
+        }
+    }
+    .article-list{
+        margin: 10px;
+        overflow-y: scroll;
+        width: 215px;
+        article{
+            margin-bottom: 10px;
+            display: flex;
+            width: 200px;
+            height: 59px;
+            background: #F5F2F2;
+            border: 1px solid rgba(252, 93, 65, 0.49);
+            p{
+                font-size: map-get($font-sizes , "smalltext" ) ;
+                line-height: map-get($line-heights , "small");
+                margin: 6px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                
+            }
+        }
+        
+    }
+}
+
+
+
+//ARTICLE//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //MOBILE//
 .article-preview-image{
 display: none;
@@ -172,3 +255,33 @@ display: none;
 
 }
 //MOBILE//
+
+
+
+
+
+
+
+
+
+//SCROLLBAR//
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  //SCROLLBAR//
