@@ -203,9 +203,7 @@ $font-sizes:("menu":20px,"smalltext":10px);
 
 //MOBILE//
 @media only screen and (max-width: 600px) {
-.article-preview-image{
- display: none;
-}
+
 
 //Header//
 .header-container{
@@ -271,20 +269,31 @@ $font-sizes:("menu":20px,"smalltext":10px);
 .main-content{
     display: block;
 }
+.sliderbox{
+    overflow: hidden;
+}
 .articles-container{
-    width: 90%;
+    height: fit-content;
+    width: 100vw;
+    justify-content: baseline;
+    border: none;
+    flex-direction: row;
+    margin: 0px;
     .article-preview{
-        display: none;
+        width: 100vw;
+        height: 300px;
+        margin: 0px;
+        padding: 0px;
+        img{
+            width: 100vw;
+            height: 100%;
+        }
+        .article-preview-description{
+            bottom: 0px;
+        }
     }
     .article-list{
-        width: 100%;
-        overflow: scroll;
-          
-          
-        article{
-            width: 100%;
-            
-        }
+       display: none;
     }
 }
 ::-webkit-scrollbar{
