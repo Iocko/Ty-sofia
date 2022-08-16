@@ -1,7 +1,8 @@
 $(function(){
     var $container = $(".article-list");
     var $mainContainer = $(".articles-container");
-    
+    let isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+
 
     function buildMenuItem(data){
         var $el
@@ -22,6 +23,15 @@ $(function(){
                     '<p class="article-description">'+entry.title+'</p>'+
                     '</article>')
                     $container.append($el)
+                if(isMobile)
+                {
+                    $el.click(function (e) { 
+                        window.location = entry.link;
+                    });
+
+                }
+                    
+                else{
                     $el.click(function (e) { 
                         var $mainEl = $('<div class="article-preview">'+
                                         '<img src="'+entry.image+'">'+
@@ -33,11 +43,11 @@ $(function(){
                         $(".article-preview").remove();
                         $mainContainer.prepend($mainEl)
                     });
+                }
             })
         }
-        return $el;
     }
-    $.get('/json/articles.json',function(data){
+    $.get('./json/articles.json',function(data){
         $container.empty();
         data.forEach( article => {
             $container.append(buildMenuItem(article));

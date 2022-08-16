@@ -71,6 +71,15 @@ $font-sizes:("menu":20px,"smalltext":10px);
 }
 
 //Header//
+//MAIN//
+.main-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+//MAIN//
+
 //MAINMENU//
 .main-content-menu-container{
     width: 100%;
@@ -90,7 +99,6 @@ $font-sizes:("menu":20px,"smalltext":10px);
             :hover{
                 background-color: #114B5FE5;
                 color: white;
-                font-weight: map-get($font-weights, "medium" );
             }
             a{
                 text-align: center;
@@ -194,10 +202,11 @@ $font-sizes:("menu":20px,"smalltext":10px);
 
 
 //MOBILE//
-.article-preview-image{
-display: none;
-}
 @media only screen and (max-width: 600px) {
+.article-preview-image{
+ display: none;
+}
+
 //Header//
 .header-container{
     margin: 0px;
@@ -223,7 +232,6 @@ display: none;
         .menuicon{
             display: block;
             margin: 0px 15px;
-            position: relative;
         }
     }
     .header-menu{
@@ -233,18 +241,20 @@ display: none;
         position: absolute;
         top: 4em;
         right: 0%;
-        width: 100%;
-        display: flex;  
+        display: flex;
         padding: 0px;
-        transform: translateX(1000px);
+        width: 0px;
+        overflow: hidden;
         .header-menu-item{
-            background-color: $pageblue;
             width: 100%;
+            white-space: nowrap;
+            background-color: $pageblue;
             border-bottom: 1px solid rgba(18, 43, 64, 0.5);
         }
-    }
+    
+}
     .open{
-        transform: translateX(0px);
+        width: 100%;
     }
 }
 
@@ -256,6 +266,32 @@ display: none;
 }
 //MAINMENU//
 
+
+//MAIN//
+.main-content{
+    display: block;
+}
+.articles-container{
+    width: 90%;
+    .article-preview{
+        display: none;
+    }
+    .article-list{
+        width: 100%;
+        overflow: scroll;
+          
+          
+        article{
+            width: 100%;
+            
+        }
+    }
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+//MAIN//
 }
 //MOBILE//
 
@@ -288,3 +324,4 @@ display: none;
     background: #555; 
   }
   //SCROLLBAR//
+  
