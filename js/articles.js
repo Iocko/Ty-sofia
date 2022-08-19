@@ -1,7 +1,7 @@
 $(function(){
     var $container = $(".article-list");
     var $mainContainer = $(".articles-container");
-    let isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+    let isMobile = window.matchMedia("only screen and (max-width: 1023px)").matches;
     
 
     function buildMenuItem(data){

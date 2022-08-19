@@ -1,9 +1,8 @@
 $(function(){
-    let isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+    let isMobile = window.matchMedia("only screen and (max-width: 1023px)").matches;
     if(isMobile){
     const $slider = $('.articles-container');
     const $size = document.body.clientWidth;
-    console.log($size);
     let $counter = -3.5;
     const prevBT = $("#prevBT");
     const nextBT = $("#nextBT");
