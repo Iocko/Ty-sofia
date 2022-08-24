@@ -32,9 +32,9 @@ body, *, *:before, *:after {
 }
 .header-container .header-menu {
   list-style: none;
+  display: flex;
 }
 .header-container .header-menu .header-menu-item {
-  float: left;
   padding-left: 16px;
   font-size: 20px;
   line-height: 23.44px;

@@ -49,8 +49,8 @@ $font-sizes:("menu":20px,"smalltext":10px);
     }
     .header-menu{
         list-style: none;
+        display: flex;
         .header-menu-item{
-            float: left;
             padding-left: 16px;
             font-size: 20px;
             line-height: map-get($line-heights,"regular");
